@@ -2,21 +2,20 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
-//const stringa1 = "Epicode education è una scuola online";
-//const stringa2 = "Questa scuola ti fa diventare developer";
 
-//const concatenazione = function(stringa1, stringa2){
-    
-//}
-//const stringa3 = stringa1.startsWith("Epicode educaion");
-//const stringa4 = stringa2.endsWith("fa diventare developer");
+console.log("ESERCIZIO 1:")
+const concatString = (stringa1, stringa2) => {
+  return stringa1.slice(0, 2).concat(stringa2.slice(stringa2.length - 3))
+}
 
-//console.log(stringa3 + stringa4);
+console.log(concatString("Epicode", "Epico"));
+
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 
+console.log("ESERCIZIO 2:")
 let array = [];
 const elementi = 10;
 const max = 100;
@@ -30,28 +29,43 @@ console.log(array)
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
-const valoriPari = array.filter((array) => array > 30)
-    console.log(valoriPari)
+
+console.log("ESERCIZIO 3:")
+const valoriPari = (array) => {
+  return array.filter((elemento) => elemento% 2 === 0)
+}
+    console.log(valoriPari([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-let somma = 0;
-array.forEach(numero => {
-    somma = somma + numero
+
+console.log("ESERCIZIO 4:")
+const sommaNumeri = (array) => {
+  let somma = 0;  
+  array.forEach((numero) => {
+  somma += numero
 })
-    console.log(somma)
+return somma;
+}
+    console.log(sommaNumeri([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
         
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-const totaleLista = array.reduce((totale, valoreCorrente) => totale + valoreCorrente, 0)
-    console.log(totaleLista)
+console.log("ESERCIZIO 5:")
+const totaleLista = (array) => {
+  return array.reduce((acc, curr) => acc + curr, 0)
+}
+console.log(totaleLista([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 /* ESERCIZIO 6 (map)
-  Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
+  Scrivi una funzione che, dato un array di soli numeri 
+  e un numero n come parametri, ritorni un secondo array con 
+  tutti i valori del precedente incrementati di n
 */
+
 
 
 /* ESERCIZIO 7 (map)
